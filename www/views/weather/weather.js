@@ -153,7 +153,7 @@ angular.module('App')
 					}
 				}
 			]; */
-			
+			/*global firebase*/
       //enable our ability to contact the database at a certain point
       var ref  = firebase.database().ref();
       //obtain the firebas object so that we can sync changes
