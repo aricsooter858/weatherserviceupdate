@@ -1,0 +1,31 @@
+<ion-view view-title="Current Weather">
+  <ion-content>
+    <table style="width:100%">
+      <tr>
+        <td style="font-size: 50px; text-align:center; vertical-align: middle">
+          {{selected_city.weather.temperature}}&deg;
+        </td>
+        <td style="text-align: center;">
+          <img src="{{image}}" height="100" width="100">
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-size: 15px">
+         
+        </td>
+        <td style="text-align: center; font-size: 15px; text-transform: capitalize">
+          {{selected_city.weather.current_conditions}}
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-size: 15px; vertical-align: middle; height: 75px">
+          Humidity <br/> {{selected_city.weather.humidity}}%
+        </td>
+        <td style="text-align: center; font-size: 15px; vertical-align: middle">
+          Wind <br/> {{selected_city.weather.wind_direction | windDirection}} at {{selected_city.weather.wind_speed}} mph
+        </td>
+      </tr>
+    </table>
+   <!-- <select ng-model="selected_city" ng-options="s.id for s in cities" ng-change="getCurrentConditions()"></select> -->
+  </ion-content>
+</ion-view>
